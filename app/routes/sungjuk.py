@@ -7,11 +7,13 @@ sungjuk_router = APIRouter()
 # 템플릿 지정
 templates = Jinja2Templates(directory='views/templates')
 
+
 # 라우터 설정
 @sungjuk_router.get('/', response_class=HTMLResponse)
 async def sungjuk(req: Request):
     return templates.TemplateResponse('sungjuk/sungjuk.html', {'request': req})
 
-@sungjuk_router.post('/',response_class=HTMLResponse)
+
+@sungjuk_router.post('/', response_class=HTMLResponse)
 async def sungjuk():
     pass
