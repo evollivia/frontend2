@@ -13,5 +13,23 @@
     <p>총점 : {{ sj.total }}</p>
     <p>평균 : {{ sj.average }}</p>
     <p>등급 : {{ sj.grade }}</p>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <colgroup>
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+        </colgroup>
+        <tr>
+            <th>이름</th><th>국어</th><th>영어</th><th>수학</th><th>총점</th><th>평균</th><th>등급</th>
+        </tr>
+        <tr>
+            <th>{{ sj.name }}</th><th>{{ sj.korean }}</th><th>{{ sj.english }}</th><th>{{ sj.math }}</th><th>{{ sj.total }}</th><th>{{ sj.average }}</th><th>{{ sj.grade }}</th>
+        </tr>
+    </table>
 </body>
 </html>

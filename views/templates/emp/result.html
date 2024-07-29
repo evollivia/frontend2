@@ -5,17 +5,48 @@
     <title>사원 등록 결과</title>
 </head>
 <body>
-<h1>사원 등록 결과</h1>
-<p>Employee ID      : {{ emp.empid }}</p>
-<p>First Name       : {{ emp.fname }}</p>
-<p>Last Name        : {{ emp.lname }}</p>
-<p>Email            : {{ emp.email }}</p>
-<p>Phone Number     : {{ emp.phone }}</p>
-<p>Hire Date        : {{ emp.hdate }}</p>
-<p>Job ID           : {{ emp.jobid }}</p>
-<p>Salary           : {{ emp.sal }}</p>
-<p>Commission PCT   : {{ emp.comm }}</p>
-<p>Manager ID       : {{ emp.mgrid }}</p>
-<p>Department ID    : {{ emp.deptid }}</p>
+    <h1>사원 등록 결과</h1>
+    <p>Employee ID      : {{ emp.empid }}</p>
+    <p>First Name       : {{ emp.fname }}</p>
+    <p>Last Name        : {{ emp.lname }}</p>
+    <p>Email            : {{ emp.email }}</p>
+    <p>Phone Number     : {{ emp.phone }}</p>
+    <p>Hire Date        : {{ emp.hdate }}</p>
+    <p>Job ID           : {{ emp.jobid }}</p>
+    <p>Salary           : {{ emp.sal }}</p>
+    <p>Commission PCT   : {{ emp.comm }}</p>
+    <p>Manager ID       : {{ emp.mgrid }}</p>
+    <p>Department ID    : {{ emp.deptid }}</p>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <colgroup>
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+            <col width="100px">
+        </colgroup>
+        <tr>
+            <th colspan="11">사원 등록 결과</th>
+        </tr>
+        <tr>
+            <th>Employee ID</th><th>First Name</th><th>Last Name</th>
+            <th>Email</th><th>Phone Number</th><th>Hire Date</th>
+            <th>Job ID</th><th>Salary</th><th>Commission PCT</th>
+            <th>Manager ID</th><th>Department ID</th>
+        </tr>
+        <tr>
+            <th>{{ emp.empid }}</th><th>{{ emp.fname }}</th><th>{{ emp.lname }}</th>
+            <th>{{ emp.email }}</th><th>{{ emp.phone }}</th><th>{{ emp.hdate }}</th>
+            <th>{{ emp.jobid }}</th><th>{{ emp.sal }}</th><th>{{ emp.comm }}</th>
+            <th>{{ emp.mgrid }}</th><th>{{ emp.deptid }}</th>
+        </tr>
+    </table>
 </body>
 </html>
