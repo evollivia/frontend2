@@ -13,7 +13,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="views/templates")    # jinja2 설정
 app.mount('/static', StaticFiles(directory='views/static'), name='static')
 
-# # 외부 라우트 생성
+#
 app.include_router(sungjuk_router, prefix='/sungjuk')
 app.include_router(html_router, prefix='/html')
 app.include_router(css_router, prefix='/css')
