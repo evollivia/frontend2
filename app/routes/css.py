@@ -33,9 +33,9 @@ async def box(req: Request):
     return templates.TemplateResponse('css/04box.html', {'request': req})
 
 
-@css_router.get('/selector')
-async def selector(req: Request):
-    return templates.TemplateResponse('css/05selector.html', {'request': req})
+@css_router.get('/list')
+async def list(req: Request):
+    return templates.TemplateResponse('css/05list.html', {'request': req})
 
 
 @css_router.get('/selector')
