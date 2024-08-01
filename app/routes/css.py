@@ -38,9 +38,9 @@ async def list(req: Request):
     return templates.TemplateResponse('css/05list.html', {'request': req})
 
 
-@css_router.get('/selector')
-async def selector(req: Request):
-    return templates.TemplateResponse('css/06selector.html', {'request': req})
+@css_router.get('/position')
+async def position(req: Request):
+    return templates.TemplateResponse('css/06position.html', {'request': req})
 
 
 @css_router.get('/selector')
