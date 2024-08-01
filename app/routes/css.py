@@ -43,9 +43,9 @@ async def position(req: Request):
     return templates.TemplateResponse('css/06position.html', {'request': req})
 
 
-@css_router.get('/selector')
-async def selector(req: Request):
-    return templates.TemplateResponse('css/07selector.html', {'request': req})
+@css_router.get('/background')
+async def background(req: Request):
+    return templates.TemplateResponse('css/07background.html', {'request': req})
 
 
 @css_router.get('/selector')
