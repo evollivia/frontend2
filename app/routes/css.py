@@ -48,6 +48,21 @@ async def background(req: Request):
     return templates.TemplateResponse('css/07background.html', {'request': req})
 
 
+@css_router.get('/table')
+async def table(req: Request):
+    return templates.TemplateResponse('css/08table.html', {'request': req})
+
+
 @css_router.get('/selector')
 async def selector(req: Request):
-    return templates.TemplateResponse('css/08selector.html', {'request': req})
+    return templates.TemplateResponse('css/09selector.html', {'request': req})
+
+
+@css_router.get('/selector')
+async def selector(req: Request):
+    return templates.TemplateResponse('css/10selector.html', {'request': req})
+
+
+@css_router.get('/selector')
+async def selector(req: Request):
+    return templates.TemplateResponse('css/11selector.html', {'request': req})
