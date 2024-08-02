@@ -8,25 +8,28 @@
         #container{border: 1px solid red; width: 1080px; margin: 0 auto;}
 
         /*header*/
-        header{border: 1px solid darkred; height: 100px; padding: 0 30px;}
-        header h1{background: #cccccc; width: 150px; text-align: center; padding: 10px 0; float: left; /*margin-left: 20px*/}
-        header ul{list-style: none; padding: 0; float: right; /*margin-right: 10px*/}
-        header ul li{display: inline-block; /*padding: 0 1px;*/}
+        header{border: 1px solid darkred; height: 100px; }
+        header h1{background: #cccccc; width: 150px; text-align: center; padding: 10px 0; float: left; margin-left: 20px}
+        header ul{list-style: none; padding: 0; float: right; margin-right: 10px}
+        header ul li{display: inline-block; padding: 0 1px;}
         header ul li:after{content: ' |'}
         header ul li:last-child:after{content: ''}
         header div{float: left; margin-top: 60px; margin-left: 10px}
         .clear{clear: both}
 
         /*nav*/
-        nav{border: 1px solid darkgreen; height: 100px; padding: 0 25px;}
-        nav input{width: 300px}
-
+        nav{border: 1px solid darkgreen; background: #cccccc; height: 35px; padding: 0 25px;}
+        nav input{border: 1px solid black; /*margin-left: 20px*/; width: 300px; padding: 5px}
+        nav select{width: 150px; padding: 4px}
+        nav button{background: #999999; color: white; width: 150px; font-size: 16px; padding: 2px;
+                   border-radius: 8px}
+        .navgroup{height: 35px; display: table-cell; vertical-align: middle}
 
         /*main*/
-        main{border: 1px solid darkviolet; height: 100px;}
+        main{border: 1px solid darkviolet;}
 
         /*footer*/
-        footer{border: 1px solid darkcyan; height: 100px;}
+        footer{border: 1px solid darkcyan;}
     </style>
 </head>
 <body>
@@ -42,6 +45,7 @@
         <div><a href="#">Log in</a> or <a href="#">Create Account</a></div>
     </header>
     <nav class="clear">
+        <div class="navgroup">
         <input type="text" name="search">
         <select name="findtype">
             <option>Category</option>
@@ -51,6 +55,7 @@
             <option>Category4</option>
         </select>
         <button type="button" id="findbtn">SEARCH</button>
+        </div>
     </nav>
     <main>
         <section>
