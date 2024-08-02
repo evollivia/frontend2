@@ -10,7 +10,7 @@
         /*header*/
         header{border: 1px solid darkred; height: 100px; }
         header h1{background: #cccccc; width: 150px; text-align: center; padding: 10px 0; float: left; margin-left: 20px}
-        header ul{list-style: none; padding: 0; float: right; margin-right: 10px}
+        header ul{list-style: none; padding: 0; float: right; margin-right: 20px}
         header ul li{display: inline-block; padding: 0 1px;}
         header ul li:after{content: ' |'}
         header ul li:last-child:after{content: ''}
@@ -18,8 +18,8 @@
         .clear{clear: both}
 
         /*nav*/
-        nav{border: 1px solid darkgreen; background: #cccccc; height: 35px; padding: 0 25px;}
-        nav input{border: 1px solid black; /*margin-left: 20px*/; width: 300px; padding: 5px}
+        nav{border: 1px solid darkgreen; background: #cccccc; height: 35px;}
+        nav input{border: 1px solid black; margin-left: 20px; width: 300px; padding: 5px}
         nav select{width: 150px; padding: 4px}
         nav button{background: #999999; color: white; width: 150px; font-size: 16px; padding: 2px;
                    border-radius: 8px}
@@ -29,7 +29,17 @@
         main{border: 1px solid darkviolet;}
 
         /*section #1*/
-        section:first-child
+        section:first-child{height: 280px}
+        aside{width: 25%; float: left; margin-left: 20px}
+        aside ul{border: 3px solid black; list-style: none; padding: 0;}
+        aside li{padding: 8px 12px; border-bottom: 2px solid silver;}
+        aside li:last-child{border: none}
+
+        #banner{width: 70%; border: 3px solid black; float: right; margin-right: 20px; margin-top: 15px;
+                height: 269px}
+        #banner p{text-align: center; margin-top: 120px}
+        #banner ul{list-style: none; padding: 0; float: right; margin: 75px 15px}
+        #banner ul li{display: inline; padding: 5px 10px; background: #cccccc; margin: 5px}
 
 
         /*section #2*/
@@ -76,7 +86,7 @@
         </div>
     </nav>
     <main>
-        <section>
+        <section >
             <aside>
                 <ul>
                     <li>All Categories</li>
@@ -93,7 +103,7 @@
                 <ul><li>1</li><li>2</li><li>3</li><li>4</li></ul>
             </div>
         </section>
-        <section>
+        <section class="clear">
             <div id="products">
                 <h2>Today's Specials</h2>
                 <ul>
