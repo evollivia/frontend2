@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>반복문</title>
+    <style>
+        .result {
+            display: inline-block;
+            width: 100px; /* 각 결과를 일정한 너비로 설정 */
+        }
+    </style>
 </head>
 <body>
     <h1>반복문</h1>
@@ -82,6 +88,13 @@
 
     <script>
         // 구구단 출력
+        for (let i = 1; i < 10; ++i){      // 층 반복문
+            for(let j = 2; j < 10; ++j){    // 별 반복문
+                let result = `${j} x ${i} = ${i * j}`;
+                document.write(`<span class="result">${result}</span>`)
+            }
+            document.write('<br>');
+        }
     </script>
 
     <h2>break</h2>
@@ -99,6 +112,45 @@
             }
         }
         document.write(`${sum}, ${cnt}`)
+    </script>
+
+    <h2>for-in</h2>
+    <p>열거 가능한 객체의 속성을 순회해서 값을 다루고 싶을 때 사용하는 반복문</p>
+    <p>for () {</p>
+    <p>반복 실행할 코드</p>
+    <p>}</p>
+    <script>
+        const person = {    // 객체변수
+            name: '혜교',
+            age: 99,
+            email: 'abc123@987xyz.co.kr'
+        };
+        document.write(person["name"], '<br>')
+        document.write(person["age"], '<br>')
+        document.write(person["email"], '<br>')
+        for (let key in person){
+            document.write(`${key} : ${person[key]}`, '<br>')
+        }
+    </script>
+
+    <h2>for-of</h2>
+    <p>ES6에 추가된 반복문으로 배열, 문자역, Map, Set 등의 이터러블 객체의 값을 순차적으로 순회할 때 사용하는 반복문</p>
+    <p>이터러블 객체 : 순차적으로 값들이 저장된 개체를 의미, 따라서 데이터 처리시 순서가 중요시 됨</p>
+    <p>for (변수 of 이터러블 객체) {</p>
+    <p>반복 실행할 코드</p>
+    <p>}</p>
+    <script>
+        const colors = ['red','orange','yellow','green','blue'];
+        const say = 'Hello, World!!';
+        for (let i = 0; i < 5; ++i) {
+            document.write(`${colors[i]}`, '<br>')
+        } // 명령형 코드
+        for (let color of colors) {
+            document.write(`${color}`, '<br>')
+        } // 선언형 코드
+        for(let char of say){
+            document.write(`${char}`, ' ')
+        }
     </script>
 </body>
 </html>
