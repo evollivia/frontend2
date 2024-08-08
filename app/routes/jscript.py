@@ -58,16 +58,16 @@ async def callback(req: Request):
     return templates.TemplateResponse('js/09callback.html', {'request': req})
 
 
-@jscript_router.get('/function')
-async def function(req: Request):
-    return templates.TemplateResponse('js/10function.html', {'request': req})
+@jscript_router.get('/except')
+async def exceptional(req: Request):
+    return templates.TemplateResponse('js/10except.html', {'request': req})
 
 
-@jscript_router.get('/function')
-async def function(req: Request):
-    return templates.TemplateResponse('js/11function.html', {'request': req})
+@jscript_router.get('/bom')
+async def bom(req: Request):
+    return templates.TemplateResponse('js/11bom.html', {'request': req})
 
 
-@jscript_router.get('/function')
-async def function(req: Request):
-    return templates.TemplateResponse('js/12function.html', {'request': req})
+@jscript_router.get('/dom')
+async def dom(req: Request):
+    return templates.TemplateResponse('js/12dom.html', {'request': req})
