@@ -51,3 +51,23 @@ async def loopwhile(req: Request):
 @jscript_router.get('/function')
 async def function(req: Request):
     return templates.TemplateResponse('js/08function.html', {'request': req})
+
+
+@jscript_router.get('/callback')
+async def callback(req: Request):
+    return templates.TemplateResponse('js/09callback.html', {'request': req})
+
+
+@jscript_router.get('/function')
+async def function(req: Request):
+    return templates.TemplateResponse('js/10function.html', {'request': req})
+
+
+@jscript_router.get('/function')
+async def function(req: Request):
+    return templates.TemplateResponse('js/11function.html', {'request': req})
+
+
+@jscript_router.get('/function')
+async def function(req: Request):
+    return templates.TemplateResponse('js/12function.html', {'request': req})
