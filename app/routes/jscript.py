@@ -88,7 +88,6 @@ async def ajax(req: Request):
     return templates.TemplateResponse('js/15ajax.html', {'request': req})
 
 
-
-# @jscript_router.get('/event')
-# async def event(req: Request):
-#     return templates.TemplateResponse('js/16event.html', {'request': req})
+@jscript_router.get('/zipcode')
+async def zipcode(req: Request):
+    return templates.TemplateResponse('js/16zipcode.html', {'request': req})
