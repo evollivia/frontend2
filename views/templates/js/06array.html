@@ -127,7 +127,7 @@
             engs.push(Number(prompt(`${i}번 학생의 영어 점수를 입력하세요 : `)));
             maths.push(Number(prompt(`${i}번 학생의 수학 점수를 입력하세요 : `)));
         }
-        for (let i = 0; i <= names.length; ++i){
+        for (let i = 0; i < names.length; ++i){
             tots.push(kors[i] + engs[i] + maths[i]);
             avgs.push(tots[i]/3);
             switch (parseInt(avgs[i]/10)){
@@ -139,9 +139,9 @@
                 }
         }
         let result = '';
-        for (let i = 0; i <= names.length; ++i){
-            result += `${i}번 학생 이름 : ${names[i]}, ${i}번 학생 국어 : ${kors[i]}, ${i}번 학생 영어 : ${engs[i]}, ${i}번 학생 수학 : ${maths[i]}<br>`;
-            result += `${i}번 학생 총점 : ${tots[i]}, ${i}번 학생 평균 : ${avgs[i]}, ${i}번 학생 학점 : ${grds[i]}<hr>`;
+        for (let i = 0; i < names.length; ++i){
+            result += `${i+1}번 학생 이름 : ${names[i]}, ${i+1}번 학생 국어 : ${kors[i]}, ${i+1}번 학생 영어 : ${engs[i]}, ${i+1}번 학생 수학 : ${maths[i]}<br>`;
+            result += `${i+1}번 학생 총점 : ${tots[i]}, ${i+1}번 학생 평균 : ${avgs[i]}, ${i+1}번 학생 학점 : ${grds[i]}<hr>`;
         }
         document.write(result, '<br>')
     </script>
