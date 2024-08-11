@@ -109,7 +109,7 @@
     // 새 창을 하나 만들어서 임의의 위치에 띄운 후, 주기적(0.2초)으로 위치와 크기를 변경함
     let startRndWin = () => {
         makeWin2()
-        myintval = setInterval(() => {moveWin; resizeWin()}, 300);
+        myintval = setInterval(() => {moveWin(); resizeWin();}, 300);
     };
     let stopRndWin = () => {
         clearInterval(myintval);
