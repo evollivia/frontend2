@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>우편번호 검색</title>
+    <style>
+        select{padding: 5px;}
+    </style>
 </head>
 <body>
     <h1>우편번호 검색</h1>
@@ -10,6 +13,7 @@
         <select id="sido" onchange="getGugun()"></select>
         <select id="gugun" onchange="getDong()"></select>
         <select id="dong" onchange="getAddress()"></select>
+        <p id="myadde"></p>
     </div>
     <script>
         let sidodata = ['서울특별시','경기도','인천광역시',
@@ -94,9 +98,20 @@
                 }
             }
         };
+
+        let getAddress  = () => {
+            if (dong.selectedIndex > 0){
+                let result = `선택한 주소:
+                ${sido.value} ${gugun.value} ${dong.value}`;
+                let myaddr = document.querySelector('#myaddr');
+                myaddr.textContent = result;
+            }
+        };
+
         getSido();
         getGugun();
         getDong();
+        getAddress();
     </script>
 </body>
 </html>
